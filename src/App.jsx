@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import styles from './App.scss';
 import MainArea from './components/MainArea';
 import NavBar from './components/NavBar';
-import beers from "./data/beers.js";
+import beersFromData from "./data/beers.js";
 
 export default class App extends Component {
   state = {
-    beers:beers,
+    beers:beersFromData,
     searchTerm: "",
   };
 

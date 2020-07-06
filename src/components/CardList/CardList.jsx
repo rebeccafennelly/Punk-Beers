@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
-import beers from "../../data/beers.js";
+import beersFromData from "../../data/beers.js";
 
 class CardList extends Component {
   getBeers = () => {
