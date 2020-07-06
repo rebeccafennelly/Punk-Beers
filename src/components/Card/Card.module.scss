@@ -1,0 +1,48 @@
+﻿.card {
+  height: 300px;
+  width: 220px;
+  padding: 10px;
+  border: 5px solid skyblue;
+  box-shadow: rosybrown;
+  border-radius: 20px;
+  background-color: white;
+
+  .image {
+    height: 50%;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .beerDetails {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    .beerTitle {
+      text-align: center;
+      font-size: 15px;
+      color:skyblue;
+      height: 28%;
+      width: 100%;
+      text-decoration: underline;
+      text-decoration-color:black;
+      margin-top: 5px;
+    }
+
+    .description {
+    
+      display: block;
+      white-space: normal;
+      overflow-y: auto;
+      // text-overflow: ellipsis;
+      font-size: 12px;
+      font-weight: bold;
+      max-height: 70px;
+      padding-left: 3px;
+  
+
+    }
+  }
+}
+
