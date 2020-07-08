@@ -1,6 +1,6 @@
 ﻿import React, { Component } from "react";
 import styles from "./Card.module.scss";
-import beers from "../../data/beers.js";
+// import beers from "../../data/beers.js";
 
 class Card extends Component {
 
@@ -9,7 +9,7 @@ class Card extends Component {
       image_url,
       name,
       description,
-    } = this.props.beers;
+    } = this.props.info
 
   
     return (

@@ -1,17 +1,18 @@
 ﻿import React, { Component } from "react";
 import styles from "./MainArea.module.scss";
 import CardList from "../../components/CardList"
-import beersFromData from "../../data/beers.js";
+
 
 
 class MainArea extends Component {
 
 
   render() {
-const { beersFromData, searchTerm } = this.props
+const { beers, searchTerm } = this.props
+console.log(beers);
 return (
   <section className={styles.main}>
-    <CardList beers={beersFromData} searchTerm={searchTerm}/>
+    <CardList beers={beers} searchTerm={searchTerm}/>
   </section>
      
     );

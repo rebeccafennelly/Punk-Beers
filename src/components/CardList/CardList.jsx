@@ -1,25 +1,24 @@
 import React, { Component } from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
-import beersFromData from "../../data/beers.js";
+// import beers from "../../data/beers";
+
 
 class CardList extends Component {
   getBeers = () => {
     return this.props.beers
-            .filter((beer) => beer.includes(this.props.searchTerm))
-            .map((beer) => <Card />
-            );
-  // }
+      .filter((beer) => beer.name.includes(this.props.searchTerm))
+      .map((beer, index) => <li key={index} > <Card info={beer} /> </li>);
   }
 
-render() {
-    return (
-   <>
 
-      <Card />
-      <Card />
-          {/* {this.getBeers()} */}
-    </>
+  render() {
+    console.log(this.props.beers);
+    return (
+      <section className={styles.cardParent}>
+        {this.getBeers()}
+
+      </section>
     );
   }
 }
