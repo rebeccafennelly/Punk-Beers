@@ -5,7 +5,6 @@ import SearchBar from "../../components/SearchBar"
 
 class NavBar extends Component {
 
-  handleChange = (event) => this.setState({searchTerm: event.target.value})
 
   render() {
     return (

@@ -7,24 +7,44 @@ import beersFromData from "./data/beers.js";
 export default class App extends Component {
   state = {
     beers: beersFromData,
-    searchTerm: ""
+    searchTerm: "",
+    highAlcoholOnly: false,
+    classicRangeOnly: false,
+    highAcidityOnly: false
   };
 
-  updateInput = (event) => {
+
+  handleChange = (event) => {
     this.setState ({ searchTerm: event.target.value })
+    console.log("changed")
   }
 
-  handleChange = (event) => this.setState({ searchTerm: event.target.value });
+  filterClassic = () => {
+    this.setState({
+      classicRangeOnly: !this.state.classicRangeOnly,
+    })
+  }
+
+  filterABV = () => {
+    this.setState({
+      highAlcoholOnly: !this.state.highAlcoholOnly,
+    })
+  }
+
+  filterAcidic = () => {
+    this.setState({
+      highAcidityOnly: !this.state.highAcidityOnly,
+    })
+  }
 
   
 
   render() {
-    console.log(this.state.beers);
-    const { beers, searchTerm } = this.state
+    const { beers, searchTerm, highAlcoholOnly, classicRangeOnly, highAcidityOnly } = this.state
     return (
       <section className={styles.app}>
       <NavBar handleChange={this.handleChange} />
-      <MainArea beers={beers} searchTerm={searchTerm}/>
+      <MainArea beers={beers} searchTerm={searchTerm} highAlcoholOnly={highAlcoholOnly} classicRangeOnly={classicRangeOnly} highAcidityOnly={highAcidityOnly} />
       </section>
     );
   }

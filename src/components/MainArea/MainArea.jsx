@@ -8,8 +8,8 @@ class MainArea extends Component {
 
 
   render() {
-const { beers, searchTerm } = this.props
-console.log(beers);
+const { beers, searchTerm, highAlcoholOnly, classicRangeOnly, highAcidityOnly } = this.props
+
 return (
   <section className={styles.main}>
     <CardList beers={beers} searchTerm={searchTerm}/>

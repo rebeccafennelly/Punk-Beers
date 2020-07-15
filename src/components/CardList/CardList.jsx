@@ -7,7 +7,7 @@ import Card from "../Card";
 class CardList extends Component {
   getBeers = () => {
     return this.props.beers
-      .filter((beer) => beer.name.includes(this.props.searchTerm))
+      .filter((beer) => beer.name.toLowerCase().includes(this.props.searchTerm.toLowerCase()))
       .map((beer, index) => <li key={index} > <Card info={beer} /> </li>);
   }
 
