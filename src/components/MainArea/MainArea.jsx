@@ -12,6 +12,7 @@ const { beers, searchTerm, highAlcoholOnly, classicRangeOnly, highAcidityOnly } 
 
 return (
   <section className={styles.main}>
+    <h1> Pick ya' Punk!</h1>
     <CardList beers={beers} searchTerm={searchTerm}/>
   </section>
      

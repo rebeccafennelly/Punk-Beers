@@ -6,5 +6,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: grey;
+  list-style-type: none;
 }
+
+h1 {
+    color: white;
+    display: block;
+    width: 80%;
+  }

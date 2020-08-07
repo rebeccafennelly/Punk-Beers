@@ -11,7 +11,7 @@ class CardList extends Component {
       .map((beer, index) => <li key={index} > <Card info={beer} /> </li>);
   }
 
-
+  
   render() {
     console.log(this.props.beers);
     return (
